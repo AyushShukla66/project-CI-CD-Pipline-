@@ -8,6 +8,6 @@ RUN rm -rf /usr/share/nginx/html/*
 COPY ./my-website/ /usr/share/nginx/html/
 
 # Expose port 80 (default nginx port)
-EXPOSE 30080
+EXPOSE 80
 
 # Start nginx (default CMD is already defined in nginx)
