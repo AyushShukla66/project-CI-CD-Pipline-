@@ -5,7 +5,7 @@ FROM nginx
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy your custom static website content into nginx web root
-COPY ./my-website/ /usr/share/nginx/html/
+COPY ./news.html/ /usr/share/nginx/html/
 
 # Expose port 80 (default nginx port)
 EXPOSE 80
