@@ -1,2 +1,13 @@
-FROM nginx
-COPY * /usr/share/nginx/html/
+# Start from the official nginx image
+FROM nginx:alpine
+
+# Remove default nginx page (optional but recommended)
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy your custom static website content into nginx web root
+COPY ./my-website/ /usr/share/nginx/html/
+
+# Expose port 80 (default nginx port)
+EXPOSE 80
+
+# Start nginx (default CMD is already defined in nginx:alpine)
