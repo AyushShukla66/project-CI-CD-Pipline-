@@ -1,5 +1,5 @@
 # Start from the official nginx image
-FROM nginx:alpine
+FROM nginx
 
 # Remove default nginx page (optional but recommended)
 RUN rm -rf /usr/share/nginx/html/*
@@ -10,4 +10,4 @@ COPY ./my-website/ /usr/share/nginx/html/
 # Expose port 80 (default nginx port)
 EXPOSE 30080
 
-# Start nginx (default CMD is already defined in nginx:alpine)
+# Start nginx (default CMD is already defined in nginx)
